@@ -1,4 +1,4 @@
-# Terraform-configs
+# Terraform-Configs
 
 
 > Terraform is an open-source infrastructure as code software tool created by HashiCorp.
