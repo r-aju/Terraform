@@ -33,10 +33,6 @@ resource "aws_iam_role_policy_attachment" "demo-AmazonVPCPolicy" {
   role       = aws_iam_role.demo.name
 }
 
-resource "aws_iam_role_policy_attachment" "demo-Amazon-LB" {
-  policy_arn = "arn:aws:iam:policy/AWSLoadBalancerControllerIAMPolicy" # custom managed
-  role       = aws_iam_role.demo.name
-}
 
 resource "aws_eks_cluster" "eks" {
   name                      = var.cluster-name
@@ -108,10 +104,6 @@ resource "aws_iam_role_policy_attachment" "nodes-AmazonS3ClusterPolicy" {
   role       = aws_iam_role.nodes.name
 }
 
-resource "aws_iam_role_policy_attachment" "nodes-AmazongrafanaClusterPolicy" {
-  policy_arn = "arn:aws:iam:policy/Grafana" # custom managed
-  role       = aws_iam_role.nodes.name
-}
 
 
 
