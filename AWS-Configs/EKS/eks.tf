@@ -34,7 +34,7 @@ resource "aws_iam_role_policy_attachment" "demo-AmazonVPCPolicy" {
 }
 
 resource "aws_iam_role_policy_attachment" "demo-Amazon-LB" {
-  policy_arn = "arn:aws:iam::536612919621:policy/AWSLoadBalancerControllerIAMPolicy" # custom managed
+  policy_arn = "arn:aws:iam:policy/AWSLoadBalancerControllerIAMPolicy" # custom managed
   role       = aws_iam_role.demo.name
 }
 
@@ -109,7 +109,7 @@ resource "aws_iam_role_policy_attachment" "nodes-AmazonS3ClusterPolicy" {
 }
 
 resource "aws_iam_role_policy_attachment" "nodes-AmazongrafanaClusterPolicy" {
-  policy_arn = "arn:aws:iam::536612919621:policy/Grafana" # custom managed
+  policy_arn = "arn:aws:iam:policy/Grafana" # custom managed
   role       = aws_iam_role.nodes.name
 }
 
