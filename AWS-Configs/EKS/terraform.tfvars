@@ -53,8 +53,14 @@ node-group-role-name = "terraform-ng-testing"
 ng-name              = "terraform-nodes"
 
 capacity = "ON_DEMAND"
-disk     = 20
+ami_types = "AL2_x86_64"
+instance_type = ["m5.2xlarge"]
+disk     = 40
+desired_nodes = 2
+max_nodes = 2
+min_nodes = 1
 
- 
+
+
 
 
