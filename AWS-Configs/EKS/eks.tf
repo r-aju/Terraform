@@ -121,16 +121,16 @@ resource "aws_eks_node_group" "nodes" {
 
 
   capacity_type  = var.capacity
-  instance_types = ["t3.small"]
+  instance_types =  var.instance_type  # ["t3.small"]   var.instance_type
   disk_size      = var.disk
-  ami_type       = "AL2_x86_64"
+  ami_type       = var.ami_types
 
 
 
   scaling_config {
-    desired_size = 1
-    max_size     = 1
-    min_size     = 1
+    desired_size = var.desired_nodes
+    max_size     = var.max_nodes
+    min_size     = var.min_nodes
   }
 
 
