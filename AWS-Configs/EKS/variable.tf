@@ -149,25 +149,39 @@ variable "node-group-role-name" {
   type        = string
 }
 
-variable "ng-name" {
-  description = "Name for EKS Node Groups"
-  type        = string
-}
-
-
-
 variable "capacity" {
   description = "Setting weather it's ONDEMAND or SPOT Type of Instances"
   type        = string
 }
 
+variable "ami_types" {
+  description = "Setting the AMI Type for the Instances ex:AL2_x86_64 etc etc"
+  type        = string
+}
 
+variable "instance_type" {
+  description = "Instance types ex:t2.micro, t3.medium etc etc"
+  
+}
+variable "desired_nodes" {
+type = number
+description = "The desired number of nodes in the Node Group"
+}
+
+variable "max_nodes" {
+type = number
+description = "The maximum number of nodes in the Node Group"
+}
+
+variable "min_nodes" {
+type = number
+description = "The minimun number of nodes in the Node Group"
+}
 
 variable "disk" {
   description = "The storage for the Nodes"
   type        = number
 }
-
 
 
 
